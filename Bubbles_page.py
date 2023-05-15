@@ -1,6 +1,6 @@
 from tkinter import *
+from tkinter import ttk
 from datetime import datetime
-from subprocess import call
 
 def logaction(logtext):
     delta = datetime.now() - startdatetime
@@ -20,6 +20,8 @@ root.title("Welcome")
 #Define the geometry of window
 root.geometry("300x500")
 
+def exit_program():
+   root.destroy()
 
 #Title frame
 title_frame = Frame(root, width=300, height=100)
@@ -42,26 +44,6 @@ c_party = circle_canvas.create_oval(64,189,204,329)
 
 t_beach = circle_canvas.create_text(34,59, text="Beach")
 
-t_party = Button(circle_canvas, text="Party/Clubbing", command=Open("Account_overview.py"))
+t_party = Button(circle_canvas, text="Party/Clubbing", command=exit_program).grid(padx=94, pady=249)
 
 root.mainloop()
-
-#import math
-#import tkinter as tk
-
-#def draw(angle, text):
-#    x = math.cos(math.radians(angle)) * 50 + 250
-#    y = math.sin(math.radians(angle)) * 50 + 250
-#    obj = canvas.create_text(250, 250, text=text, fill="green")
-#    canvas.itemconfig(obj, angle=-angle)
-#    canvas.coords(obj, x, y)
-#    return obj
-
-#root = tk.Tk()
-#canvas = tk.Canvas(root, width=500, height=500)
-
-#for i in range(0,360,60):
-    #draw(i,"Hi")
-
-#canvas.pack()
-#root.mainloop()
