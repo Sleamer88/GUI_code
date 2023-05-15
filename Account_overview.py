@@ -14,7 +14,7 @@ logaction("New user tracking session @" + str(startdatetime))
 
 root = Tk()
 root.title("Frame for window")
-root.geometry("900x1500")
+root.geometry("150x250")
 root.config(bg="white")
 
 left_frame = Frame(root, width=200, height=400)
@@ -32,13 +32,13 @@ Label(tool_bar, text="Occupation: ").grid(row=4, column=0, padx=5, pady=5)
 Label(tool_bar, text="Age: ").grid(row=5, column=0, padx=5, pady=5)
 
 
-# import subprocess
-#
-# def run_program():
-#     subprocess.call(["python", "Country_selection(proof_of_concept).py"])
-#
-#
-# btn = Button(root, text='Next', command=run_program)
-# btn.pack()
+import subprocess
+
+def run_program():
+    subprocess.call(["python", "Country_selection(proof of concept).py"])
+
+
+btn = Button(root, text='Next', command=run_program)
+btn.grid()
 
 root.mainloop()
