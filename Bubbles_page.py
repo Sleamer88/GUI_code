@@ -55,5 +55,6 @@ t_adventurous = circle_canvas.create_text(59,144, text="Adventurous")
 t_escape = circle_canvas.create_text(164,139, text="Escape")
 t_cruise = circle_canvas.create_text(34,229, text="cruise")
 t_party = Button(circle_canvas, text="Party/Clubbing", command=run_program).grid(padx=94, pady=249)
+logaction(" User selected what kind of holiday they wish to have@" + str(startdatetime))
 
 root.mainloop()

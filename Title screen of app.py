@@ -31,23 +31,17 @@ canvas.create_image(10,10,anchor=NW,image=img)
 
 import subprocess
 
+
 def run_program():
     subprocess.call(["python", "Hi-fi (questionnaire).py"])
 
 
 btn = Button(root, text='Questionnaire', command=run_program)
 btn.pack()
+logaction(" Questionnaire was selected @" + str(startdatetime))
 
-import subprocess
-
-def run_program():
-    subprocess.call(["python", "Bubbles_page.py"])
-
-
-btn = Button(root, text='Fast track (less accurate)')
-btn.pack()
+btn2 = Button(root, text='Fast track (less accurate)')
+btn2.pack()
 
 
 root.mainloop()
-
-
