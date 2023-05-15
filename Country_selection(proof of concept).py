@@ -1,6 +1,16 @@
 from tkinter import *
 from tkinter import ttk
+from datetime import datetime
 
+def logaction(logtext):
+    delta = datetime.now() - startdatetime
+    logfile.write(str(delta) + "" + logtext + "\n")
+
+
+startdatetime = datetime.now()
+starttime = datetime.timestamp(startdatetime)
+logfile = open("logging_prototype.txt", "a")
+logaction("New user tracking session @" + str(startdatetime))
 
 root = Tk()
 root.geometry("300x580")
@@ -23,10 +33,12 @@ xlist = ["Amsterdam"]
 Combov = ttk.Combobox(frame, values= vlist)
 Combov.set("Choose a country")
 Combov.grid(padx=5, pady=5)
+logaction(" User selected a country@" + str(startdatetime))
 
 Combox = ttk.Combobox(frame,values= xlist)
 Combox.set("Choose a city")
 Combox.grid(padx=6, pady=6)
+logaction(" User selected a city@" + str(startdatetime))
 
 # Import Required Library
 from tkcalendar import Calendar
@@ -47,6 +59,7 @@ def grad_date():
 # Add Button and Label
 Button(root, text="Get Date",
        command=grad_date).grid(pady=20)
+logaction(" User selected a date@" + str(startdatetime))
 
 date = Label(root, text="")
 date.grid(pady=20)
@@ -58,10 +71,11 @@ Combov.grid(padx=5, pady=5)
 import subprocess
 
 def run_program():
-    subprocess.call(["python", "options_screen.py"])
+    subprocess.call(["python", "Options.py"])
 
 
 btn = Button(root, text='Next', command=run_program)
 btn.grid()
+logaction(" User has selected location and time for visit@" + str(startdatetime))
 
 root.mainloop()

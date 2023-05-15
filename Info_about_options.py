@@ -14,7 +14,7 @@ logaction("New user tracking session @" + str(startdatetime))
 
 root = Tk()
 root.title("Frame for window")
-root.geometry("260x300")
+root.geometry("150x250")
 root.config(bg="white")
 
 left_frame = Frame(root, width=200, height=400)
@@ -25,21 +25,20 @@ tool_bar.grid(row=2, column=0, padx=5, pady=5)
 
 Label(left_frame, text="Account overview").grid(row=1, column=0, padx=5)
 
-Label(tool_bar, text="Name: AIR Amsterdam").grid(row=0, column=0, padx=5, pady=5)
-Label(tool_bar, text="Address: Amstelstraat 24 \n 1017 DA Amsterdam").grid(row=2, column=0, padx=5, pady=5)
-Label(tool_bar, text="Phone: 020 820 0670").grid(row=3, column=0, padx=5, pady=5)
-Label(tool_bar, text="Opening hours: Mon-Wed: closed \n Thurs-Sun: 22:00 - 05:00").grid(row=4, column=0, padx=5, pady=5)
-Label(tool_bar, text="Service options: Dine in \n no takeaway, no delivery").grid(row=5, column=0, padx=5, pady=5)
+Label(tool_bar, text="Name: ").grid(row=0, column=0, padx=5, pady=5)
+Label(tool_bar, text="Email: ").grid(row=2, column=0, padx=5, pady=5)
+Label(tool_bar, text="Gender: ").grid(row=3, column=0, padx=5, pady=5)
+Label(tool_bar, text="Occupation: ").grid(row=4, column=0, padx=5, pady=5)
+Label(tool_bar, text="Age: ").grid(row=5, column=0, padx=5, pady=5)
 
 
 import subprocess
 
 def run_program():
-    subprocess.call(["python", "Questionnaire(after_experience).py"])
+    subprocess.call(["python", "Country_selection(proof of concept).py"])
 
 
 btn = Button(root, text='Next', command=run_program)
 btn.grid()
-logaction(" User has seen all the info required@" + str(startdatetime))
 
 root.mainloop()

@@ -34,18 +34,21 @@ q3_frame.grid(row=3, column=0, padx=5, pady=5, sticky="wens")
 
 Label(title_frame, text="Please answer the following:").grid(row=1, column=0, padx=5)
 Label(q1_frame, text="Do you like warm weather?").grid(row=1, column=0, padx=5)
-Label(q2_frame, text="Do you prefer cities or beaches?").grid(row=1, column=0, padx=5)
+Label(q2_frame, text="Do you prefer cities over beaches?").grid(row=1, column=0, padx=5)
 Label(q3_frame, text="Do you like the historical aspects \n of a place?").grid(row=1, column=0, padx=5)
 
 # questions
 q1_slider = Scale(q1_frame, from_=0, to=5, orient="horizontal")
 q1_slider.grid(row=2, column=0, padx=5)
+logaction(" first question was answered@" + str(startdatetime))
 
 q2_slider = Scale(q2_frame, from_=0, to=5, orient="horizontal")
 q2_slider.grid(row=2, column=0, padx=5)
+logaction(" second question was answered@" + str(startdatetime))
 
 q3_slider = Scale(q3_frame, from_=0, to=5, orient="horizontal")
 q3_slider.grid(row=2, column=0, padx=5)
+logaction(" third question was answered@" + str(startdatetime))
 
 # get the values from the sliders
 q1_value = q1_slider.get()
@@ -61,5 +64,6 @@ def run_program():
 
 btn = Button(root, text='Next', command=run_program)
 btn.grid()
+logaction(" User finished questionnaire@" + str(startdatetime))
 
 root.mainloop()

@@ -44,5 +44,6 @@ t_historical = circle_canvas.create_text(114,54, text="Historical")
 t_adventurous = circle_canvas.create_text(59,144, text="Adventurous")
 t_escape = circle_canvas.create_text(164,139, text="Escape")
 t_party = Button(circle_canvas, text="Party/Clubbing", command=root.destroy).grid(padx=94, pady=249)
+logaction(" User is finished with the experience@" + str(startdatetime))
 
 root.mainloop()

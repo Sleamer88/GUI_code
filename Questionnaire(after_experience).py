@@ -40,12 +40,15 @@ Label(q3_frame, text="Would you recommend to a friend?").grid(row=1, column=0, p
 # questions
 q1_slider = Scale(q1_frame, from_=0, to=5, orient="horizontal")
 q1_slider.grid(row=2, column=0, padx=5)
+logaction(" User answered first question@" + str(startdatetime))
 
 q2_slider = Scale(q2_frame, from_=0, to=5, orient="horizontal")
 q2_slider.grid(row=2, column=0, padx=5)
+logaction(" User answered second question@" + str(startdatetime))
 
 q3_slider = Scale(q3_frame, from_=0, to=5, orient="horizontal")
 q3_slider.grid(row=2, column=0, padx=5)
+logaction(" User answered third question@" + str(startdatetime))
 
 # get the values from the sliders
 q1_value = q1_slider.get()
@@ -61,5 +64,6 @@ def run_program():
 
 btn = Button(root, text='Next', command=run_program)
 btn.grid()
+logaction(" User has readjusted their suggestions@" + str(startdatetime))
 
 root.mainloop()
