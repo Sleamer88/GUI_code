@@ -1,1 +1,14 @@
 0:00:00.001999New user tracking session @2023-05-15 12:45:46.007914
+0:00:00.001000New user tracking session @2023-05-15 13:24:28.523451
+0:00:00New user tracking session @2023-05-15 13:25:19.403183
+0:00:00.000986New user tracking session @2023-05-15 13:27:24.467044
+0:00:00New user tracking session @2023-05-15 13:29:59.983730
+0:00:00New user tracking session @2023-05-15 13:31:02.265803
+0:00:00.001003New user tracking session @2023-05-15 13:31:15.945000
+0:00:00.000999New user tracking session @2023-05-15 13:33:28.910050
+0:00:00.001016New user tracking session @2023-05-15 13:33:44.765177
+0:00:00.001005New user tracking session @2023-05-15 13:34:06.754640
+0:00:00.001001New user tracking session @2023-05-15 13:34:29.117683
+0:00:00.001000New user tracking session @2023-05-15 13:37:19.480372
+0:00:00.000995New user tracking session @2023-05-15 13:37:31.929946
+0:00:00New user tracking session @2023-05-15 13:38:39.869944

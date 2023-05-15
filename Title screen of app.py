@@ -1,5 +1,6 @@
 from tkinter import *
 from datetime import datetime
+from PIL import Image,ImageTk
 
 def logaction(logtext):
     delta = datetime.now() - startdatetime
@@ -10,11 +11,6 @@ startdatetime = datetime.now()
 starttime = datetime.timestamp(startdatetime)
 logfile = open("logging_prototype.txt", "a")
 logaction("New user tracking session @" + str(startdatetime))
-
-
-#Import the required Libraries
-from tkinter import *
-from PIL import Image,ImageTk
 
 #Create an instance of tkinter frame
 root = Tk()
