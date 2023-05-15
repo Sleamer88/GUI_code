@@ -1,6 +1,6 @@
 from tkinter import *
 from datetime import datetime
-
+import subprocess
 
 
 def logaction(logtext):
@@ -11,59 +11,56 @@ def logaction(logtext):
 startdatetime = datetime.now()
 starttime = datetime.timestamp(startdatetime)
 logfile = open("logging_prototype.txt", "a")
-logaction("New user tracking session @" + str(startdatetime))
+logaction("Questionnaire has been started @" + str(startdatetime))
 
 root = Tk()
-root.geometry("250x300")
+root.geometry("300x500")
 root.title("Questionnaire")
 
 # set up the frames
-title_frame = Frame(root, width=250, height=100)
-title_frame.grid(row=0, column=0, padx=5, pady=5, sticky="wens")
+title_frame = Frame(root, width=300, height=100, pady=10)
+title_frame.pack()
 
-q1_frame = Frame(root, width=250, height=150)
-q1_frame.grid(row=1, column=0, padx=5, pady=5, sticky="wens")
+q1_frame = Frame(root, width=300, height=150)
+q1_frame.pack()
 
-q2_frame = Frame(root, width=250, height=150)
-q2_frame.grid(row=2, column=0, padx=5, pady=5, sticky="wens")
+q2_frame = Frame(root, width=300, height=150)
+q2_frame.pack()
 
-q3_frame = Frame(root, width=250, height=150)
-q3_frame.grid(row=3, column=0, padx=5, pady=5, sticky="wens")
+q3_frame = Frame(root, width=300, height=150)
+q3_frame.pack()
 
 # titles
 
-Label(title_frame, text="Please answer the following:").grid(row=1, column=0, padx=5)
-Label(q1_frame, text="Do you like warm weather?").grid(row=1, column=0, padx=5)
-Label(q2_frame, text="Do you prefer cities over beaches?").grid(row=1, column=0, padx=5)
-Label(q3_frame, text="Do you like the historical aspects \n of a place?").grid(row=1, column=0, padx=5)
+Label(title_frame, text="Please answer the following:").pack()
+Label(q1_frame, text="Do you like warm weather?").pack()
+Label(q2_frame, text="Do you prefer cities over beaches?").pack()
+Label(q3_frame, text="Do you like the historical aspects \n of a place?").pack()
 
 # questions
 q1_slider = Scale(q1_frame, from_=0, to=5, orient="horizontal")
-q1_slider.grid(row=2, column=0, padx=5)
-logaction(" first question was answered@" + str(startdatetime))
+q1_slider.pack()
+
 
 q2_slider = Scale(q2_frame, from_=0, to=5, orient="horizontal")
-q2_slider.grid(row=2, column=0, padx=5)
+q2_slider.pack()
 logaction(" second question was answered@" + str(startdatetime))
 
 q3_slider = Scale(q3_frame, from_=0, to=5, orient="horizontal")
-q3_slider.grid(row=2, column=0, padx=5)
+q3_slider.pack()
 logaction(" third question was answered@" + str(startdatetime))
 
-# get the values from the sliders
-q1_value = q1_slider.get()
-q2_value = q2_slider.get()
-q3_value = q3_slider.get()
-
-
-import subprocess
-
 def run_program():
+    logaction(" User finished questionnaire@" + str(datetime.now()))
+    logaction(" first answer is: " + str(q1_slider.get()))
+    logaction(" second answer is: " + str(q2_slider.get()))
+    logaction(" third answer is: " + str(q3_slider.get()))
+    root.destroy()
     subprocess.call(["python", "Bubbles_page.py"])
+    
+    
 
 
 btn = Button(root, text='Next', command=run_program)
-btn.grid()
-logaction(" User finished questionnaire@" + str(startdatetime))
-
+btn.pack()
 root.mainloop()

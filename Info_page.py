@@ -1,5 +1,6 @@
 from tkinter import *
 from datetime import datetime
+import subprocess
 
 
 def logaction(logtext):
@@ -10,11 +11,11 @@ def logaction(logtext):
 startdatetime = datetime.now()
 starttime = datetime.timestamp(startdatetime)
 logfile = open("logging_prototype.txt", "a")
-logaction("New user tracking session @" + str(startdatetime))
+logaction("user opened info on club @" + str(startdatetime))
 
 root = Tk()
 root.title("Frame for window")
-root.geometry("260x300")
+root.geometry("300x500")
 root.config(bg="white")
 
 left_frame = Frame(root, width=200, height=400)
@@ -32,14 +33,12 @@ Label(tool_bar, text="Opening hours: Mon-Wed: closed \n Thurs-Sun: 22:00 - 05:00
 Label(tool_bar, text="Service options: Dine in \n no takeaway, no delivery").grid(row=5, column=0, padx=5, pady=5)
 
 
-import subprocess
-
 def run_program():
+    root.destroy()
     subprocess.call(["python", "Questionnaire(after_experience).py"])
 
 
 btn = Button(root, text='Next', command=run_program)
 btn.grid()
-logaction(" User has seen all the info required@" + str(startdatetime))
 
 root.mainloop()

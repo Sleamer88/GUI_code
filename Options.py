@@ -2,6 +2,7 @@ from tkinter import *
 from tkinter import ttk
 from datetime import datetime
 from PIL import Image,ImageTk
+import subprocess
 
 def logaction(logtext):
     delta = datetime.now() - startdatetime
@@ -11,7 +12,7 @@ def logaction(logtext):
 startdatetime = datetime.now()
 starttime = datetime.timestamp(startdatetime)
 logfile = open("logging_prototype.txt", "a")
-logaction("New user tracking session @" + str(startdatetime))
+logaction("User looking through options @" + str(startdatetime))
 
 
 root = Tk()
@@ -27,15 +28,12 @@ t_category = category.create_text(148,23, text="Party/Clubbing")
 
 Label(root, text="Results for clubs in Amsterdam:").grid(row=1, columnspan=2)
 
-import subprocess
+
 
 def run_program():
+    logaction(" User selected their club of choice@" + str(datetime.now()))
+    root.destroy()
     subprocess.call(["python", "Info_page.py"])
-
-
-btn = Button(root, text='Next', command=run_program)
-btn.grid()
-logaction(" User selected their club of choice@" + str(startdatetime))
 
 #club Jimmy woo
 jim = ImageTk.PhotoImage(Image.open("./Images/jimmy.png").resize((140,100)))

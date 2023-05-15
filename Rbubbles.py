@@ -1,6 +1,7 @@
 from tkinter import *
 from tkinter import ttk
 from datetime import datetime
+import subprocess
 
 def logaction(logtext):
     delta = datetime.now() - startdatetime
@@ -21,6 +22,7 @@ root.title("Welcome")
 root.geometry("250x400")
 
 def exit_program():
+   logaction(" User is finished with the experience@" + str(datetime.now()))
    root.destroy()
 
 #Title frame
@@ -43,7 +45,6 @@ c_party = circle_canvas.create_oval(64,189,204,329)
 t_historical = circle_canvas.create_text(114,54, text="Historical")
 t_adventurous = circle_canvas.create_text(59,144, text="Adventurous")
 t_escape = circle_canvas.create_text(164,139, text="Escape")
-t_party = Button(circle_canvas, text="Party/Clubbing", command=root.destroy).grid(padx=94, pady=249)
-logaction(" User is finished with the experience@" + str(startdatetime))
+t_party = Button(circle_canvas, text="Party/Clubbing", command=exit_program).grid(padx=94, pady=249)
 
 root.mainloop()
