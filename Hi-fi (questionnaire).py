@@ -1,6 +1,6 @@
 from tkinter import *
 from datetime import datetime
-from subprocess import call
+
 
 
 def logaction(logtext):
@@ -14,6 +14,7 @@ logfile = open("logging_prototype.txt", "a")
 logaction("New user tracking session @" + str(startdatetime))
 
 root = Tk()
+root.geometry("250x300")
 root.title("Questionnaire")
 
 # set up the frames
@@ -51,13 +52,14 @@ q1_value = q1_slider.get()
 q2_value = q2_slider.get()
 q3_value = q3_slider.get()
 
-# next_frame = Frame(root, width=250, height=150)
-# next_frame.grid(row=3, column=0, padx=5, pady=5, sticky="wens")
-# Button
-# def Open():
-#     call(["python", "Account_overview.py"])
-#
-# Button(title_frame, text="Next", command=Open()).grid(row=19, column=100, padx=2, pady=2, sticky="wens")
 
+import subprocess
+
+def run_program():
+    subprocess.call(["python", "Bubbles_page.py"])
+
+
+btn = Button(root, text='Next', command=run_program)
+btn.grid()
 
 root.mainloop()
