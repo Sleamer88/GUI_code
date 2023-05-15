@@ -14,7 +14,7 @@ logfile = open("logging_prototype.txt", "a")
 logaction("New user tracking session @" + str(startdatetime))
 
 root = Tk()
-root.geometry("250x300")
+root.geometry("250x310")
 root.title("Questionnaire")
 
 # set up the frames
@@ -32,10 +32,10 @@ q3_frame.grid(row=3, column=0, padx=5, pady=5, sticky="wens")
 
 # titles
 
-Label(title_frame, text="Please answer the following:").grid(row=1, column=0, padx=5)
-Label(q1_frame, text="Do you like warm weather?").grid(row=1, column=0, padx=5)
-Label(q2_frame, text="Do you prefer cities or beaches?").grid(row=1, column=0, padx=5)
-Label(q3_frame, text="Do you like the historical aspects \n of a place?").grid(row=1, column=0, padx=5)
+Label(title_frame, text="Please answer the following\n(from 1-5):").grid(row=1, column=0, padx=5)
+Label(q1_frame, text="How much did you enjoy \n the recommended location?").grid(row=1, column=0, padx=5)
+Label(q2_frame, text="Would you come back again??").grid(row=1, column=0, padx=5)
+Label(q3_frame, text="Would you recommend to a friend?").grid(row=1, column=0, padx=5)
 
 # questions
 q1_slider = Scale(q1_frame, from_=0, to=5, orient="horizontal")
@@ -56,7 +56,7 @@ q3_value = q3_slider.get()
 import subprocess
 
 def run_program():
-    subprocess.call(["python", "Bubbles_page.py"])
+    subprocess.call(["python", "Rbubbles"])
 
 
 btn = Button(root, text='Next', command=run_program)

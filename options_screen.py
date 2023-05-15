@@ -27,6 +27,15 @@ t_category = category.create_text(148,23, text="Party/Clubbing")
 
 Label(root, text="Results for clubs in Amsterdam:").grid(row=1, columnspan=2)
 
+import subprocess
+
+def run_program():
+    subprocess.call(["python", "Info_page.py"])
+
+
+btn = Button(root, text='Next', command=run_program)
+btn.grid()
+
 #club Jimmy woo
 jim = ImageTk.PhotoImage(Image.open("./Images/jimmy.png").resize((140,100)))
 
@@ -53,7 +62,7 @@ air = ImageTk.PhotoImage(Image.open("./Images/air.png").resize((140,100)))
 air_frame = Frame(root, width=300, height= 150, bg="lightgrey")
 air_frame.grid(row=4, column=0, columnspan=2, pady=4)
 
-Label(air_frame, text="air").grid(row=0, column=0, columnspan=2, pady=4)
+Button(air_frame, text="air", command= run_program).grid(row=0, column=0, columnspan=2, pady=4)
 Label(air_frame, image=air).grid(row=1, column=0)
 Label(air_frame, text="Huge club playing progressive dance music on multiple floors with 5 quirky bars.", wraplength=140).grid(row=1, column=1)
 root.mainloop()
