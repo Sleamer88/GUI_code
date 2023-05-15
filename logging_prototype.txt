@@ -17,3 +17,20 @@
 0:00:00.000999New user tracking session @2023-05-15 14:37:12.851694
 0:00:00New user tracking session @2023-05-15 14:37:01.684708
 0:00:00.000999New user tracking session @2023-05-15 14:36:56.094234
+0:00:00.001090New user tracking session @2023-05-15 15:07:56.515267
+0:00:00.127295 Questionnaire was selected @2023-05-15 15:07:56.515267
+0:00:00.001058New user tracking session @2023-05-15 15:08:22.285824
+0:00:00.123292 Questionnaire was selected @2023-05-15 15:08:22.285824
+0:00:00New user tracking session @2023-05-15 15:08:46.012319
+0:00:00.119356 Questionnaire was selected @2023-05-15 15:08:46.012319
+0:00:00.001034New user tracking session @2023-05-15 15:08:56.196799
+0:00:00.153783 Questionnaire was selected @2023-05-15 15:08:56.196799
+0:00:00.001001New user tracking session @2023-05-15 15:09:03.559876
+0:00:00.172295 Questionnaire was selected @2023-05-15 15:09:03.559876
+0:00:00.001113New user tracking session @2023-05-15 15:09:36.011218
+0:00:00.065784 first question was answered@2023-05-15 15:09:36.011218
+0:00:00.065784 second question was answered@2023-05-15 15:09:36.011218
+0:00:00.065784 third question was answered@2023-05-15 15:09:36.011218
+0:00:00.065784 User finished questionnaire@2023-05-15 15:09:36.011218
+0:00:00.001000New user tracking session @2023-05-15 15:09:31.239723
+0:00:00.110529 Questionnaire was selected @2023-05-15 15:09:31.239723

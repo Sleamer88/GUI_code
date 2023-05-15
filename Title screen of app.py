@@ -16,7 +16,7 @@ logaction("New user tracking session @" + str(startdatetime))
 root = Tk()
 
 #Set the geometry of tkinter frame
-root.geometry("450x250")
+root.geometry("300x500")
 
 #Create a canvas
 canvas= Canvas(root, width= 400, height= 200)
@@ -24,10 +24,10 @@ canvas.place(relx=0.5, rely=0.5, anchor=CENTER)
 canvas.pack()
 
 #Load an image in the script
-img= ImageTk.PhotoImage(Image.open("Logo.png"))
+img= ImageTk.PhotoImage(Image.open("Logo.png").resize((300,200)))
 
 #Add image to the Canvas Items
-canvas.create_image(10,10,anchor=NW,image=img)
+canvas.create_image(1,1,anchor=NW,image=img)
 
 import subprocess
 
