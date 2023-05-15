@@ -21,7 +21,7 @@ Combox.pack(padx=6, pady=6)
 import subprocess
 
 def run_program():
-    subprocess.call(["python", "Options.py"])
+    subprocess.call(["python", "options_screen.py"])
 
 
 btn = Button(root, text='Next', command=run_program)
