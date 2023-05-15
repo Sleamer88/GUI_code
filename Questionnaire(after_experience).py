@@ -54,7 +54,7 @@ def run_program():
     logaction(" second answer is: " + str(q2_slider.get()))
     logaction(" third answer is: " + str(q2_slider.get()))
     root.destroy()
-    subprocess.call(["python", "Rbubbles"])
+    subprocess.call(["python", "Rbubbles.py"])
 
 
 btn = Button(root, text='Next', command=run_program)

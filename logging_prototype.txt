@@ -1,0 +1,20 @@
+0:00:00.001711New user tracking session @2023-05-15 16:21:22.032591
+0:00:01.190698 User is finished with the experience@2023-05-15 16:21:23.223289
+0:00:00Started second questionnaire @2023-05-15 16:21:16.662526
+0:00:04.729075 User has readjusted their suggestions@2023-05-15 16:21:21.391601
+0:00:04.729075 first answer is: 3
+0:00:04.729075 second answer is: 5
+0:00:04.729075 third answer is: 5
+0:00:00user opened info on club @2023-05-15 16:21:15.074491
+0:00:00User looking through options @2023-05-15 16:21:13.193755
+0:00:01.261946 User selected their club of choice@2023-05-15 16:21:14.455701
+0:00:00User started selecting country @2023-05-15 16:21:04.060383
+0:00:00.276054 User selected a date@2023-05-15 16:21:04.060383
+0:00:08.470132 User has selected location and time for visit@2023-05-15 16:21:12.530515
+0:00:08.470132 User selected country:Netherlands
+0:00:08.470132 User selected city:Amsterdam
+0:00:08.470132 User selected date:5/26/23
+0:00:00Bubble screen has been opened @2023-05-15 16:21:02.437978
+0:00:01.017235 User selected what kind of holiday they wish to have@2023-05-15 16:21:02.437978
+0:00:00.001027New user tracking session @2023-05-15 16:21:00.614536
+0:00:01.243837 Questionnaire was skipped @2023-05-15 16:21:01.858373
