@@ -18,13 +18,13 @@ Combox = ttk.Combobox(frame,values= xlist)
 Combox.set("Choose a city")
 Combox.pack(padx=6, pady=6)
 
-# import subprocess
-#
-# def run_program():
-#     subprocess.call(["python", "Account_overview.py"])
-#
-#
-# btn = Button(root, text='Next', command=run_program)
-# btn.pack()
-#
-# root.mainloop()
+import subprocess
+
+def run_program():
+    subprocess.call(["python", "Options.py"])
+
+
+btn = Button(root, text='Next', command=run_program)
+btn.pack()
+
+root.mainloop()
